@@ -1,13 +1,14 @@
 import Carro from "./Carro";
 
-function Garagem() {
+function Garagem(props) {
   return (
     <div>
-      <h1>Garagem da Labenu</h1>
-      <Carro />
-      <Carro />
-      <Carro />
-      <Carro />
+      <h1>Garagem de {props.nome}</h1>
+      <button onClick={() => props.apresentaGaragem(props.nome)}>apresentar a garagem</button>
+      <Carro carro={props.carro1}/>
+      <Carro carro={props.carro2}/>
+      <Carro carro={props.carro3}/>
+      <Carro carro={props.carro4}/>
     </div>
   );
 }
